@@ -2,25 +2,22 @@
 flowchart TD
 
 subgraph Uzytkownik ["Użytkownik"]
-    A1(Platnosc karta gotowka telefonem)
-    A2(Wyrazne instrukcje na ekranie)
-    A3(Widoczny licznik czasu)
+    A1(Platnosc karta, gotowka lub telefonem)
 end
 
 subgraph Biletomat ["Biletomat"]
-    B1(Czytelny ekran dotykowy)
-    B2(Rozne metody platnosci)
-    B3(Wydawanie reszty)
+    B1(Wydanie reszty)
+    B2(Wyswietlenie instrukcji obslugi)
+    B3(Wyswietlenie pozostalego czasu na decyzje uzytkownika)
 end
 
 subgraph SystemTransakcyjny ["System Transakcyjny"]
     C1(Autoryzacja platnosci w czasie rzeczywistym)
-    C2(Platnosci NFC i BLIK)
 end
 
 subgraph SystemBiletowy ["System Biletowy"]
-    D1(Rejestrowanie sprzedanych biletow)
-    D2(Wspolpraca z aplikacjami mobilnymi)
+    D1(Sprzedaz biletow online)
+    D2(Rejestracja sprzedanych biletow)
 end
 
 subgraph SystemWsparciaTechnicznego ["Wsparcie IT"]
@@ -32,11 +29,10 @@ subgraph Administrator ["Administrator Systemu"]
     F1(Zdalna aktualizacja oprogramowania biletomatow)
 end
 
-A1 --> B2
-A2 --> B1
-A3 --> B1
+A1 --> B1
+B2 --> B3
+B2 --> A1
 B2 --> C1
-C1 --> C2
 D1 --> D2
 E1 --> E2
 ```

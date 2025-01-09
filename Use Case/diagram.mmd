@@ -1,38 +1,26 @@
-```mermaid
 flowchart TD
 
-subgraph Uzytkownik ["Użytkownik"]
-    A1(Platnosc karta, gotowka lub telefonem)
-end
-
 subgraph Biletomat ["Biletomat"]
-    B1(Wydanie reszty)
-    B2(Wyswietlenie instrukcji obslugi)
-    B3(Wyswietlenie pozostalego czasu na decyzje uzytkownika)
+    B1(Sprzedaż biletu)
+    B2(Zmiana języka)
+    B3(Wyświetlenie ofert)
 end
 
 subgraph SystemTransakcyjny ["System Transakcyjny"]
-    C1(Autoryzacja platnosci w czasie rzeczywistym)
+    C1(Generowanie raportow)
 end
 
 subgraph SystemBiletowy ["System Biletowy"]
     D1(Sprzedaz biletow online)
-    D2(Rejestracja sprzedanych biletow)
+    D2(Sprawdzenie ważności biletu)
+    D3(Aktualizuj listę biletów)
 end
 
 subgraph SystemWsparciaTechnicznego ["Wsparcie IT"]
-    E1(Monitorowanie stanu biletomatow)
-    E2(Wysylanie alertow o bledach)
+    E1(Pobrabnie stanu biletomatow)
+    E2(ZobCENIE alertow o bledach)
 end
 
 subgraph Administrator ["Administrator Systemu"]
     F1(Zdalna aktualizacja oprogramowania biletomatow)
 end
-
-A1 --> B1
-B2 --> B3
-B2 --> A1
-B2 --> C1
-D1 --> D2
-E1 --> E2
-```

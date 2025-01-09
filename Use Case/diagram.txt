@@ -1,0 +1,42 @@
+```mermaid
+flowchart TD
+
+subgraph Uzytkownik ["Użytkownik"]
+    A1(Platnosc karta gotowka telefonem)
+    A2(Wyrazne instrukcje na ekranie)
+    A3(Widoczny licznik czasu)
+end
+
+subgraph Biletomat ["Biletomat"]
+    B1(Czytelny ekran dotykowy)
+    B2(Rozne metody platnosci)
+    B3(Wydawanie reszty)
+end
+
+subgraph SystemTransakcyjny ["System Transakcyjny"]
+    C1(Autoryzacja platnosci w czasie rzeczywistym)
+    C2(Platnosci NFC i BLIK)
+end
+
+subgraph SystemBiletowy ["System Biletowy"]
+    D1(Rejestrowanie sprzedanych biletow)
+    D2(Wspolpraca z aplikacjami mobilnymi)
+end
+
+subgraph SystemWsparciaTechnicznego ["Wsparcie IT"]
+    E1(Monitorowanie stanu biletomatow)
+    E2(Wysylanie alertow o bledach)
+end
+
+subgraph Administrator ["Administrator Systemu"]
+    F1(Zdalna aktualizacja oprogramowania biletomatow)
+end
+
+A1 --> B2
+A2 --> B1
+A3 --> B1
+B2 --> C1
+C1 --> C2
+D1 --> D2
+E1 --> E2
+```

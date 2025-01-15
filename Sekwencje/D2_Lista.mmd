@@ -1,0 +1,9 @@
+sequenceDiagram
+    %% Diagram: D2 - Aktualizacja listy biletów
+    actor Administrator as Administrator
+    participant SystemBiletowy as System Biletowy
+    participant Biletomat as Biletomat
+    Administrator->>SystemBiletowy: Zleć aktualizację listy biletów i cen
+    SystemBiletowy->>Biletomat: Aktualizuj listy biletów i cen
+    Biletomat-->>SystemBiletowy: Potwierdzenie
+    SystemBiletowy-->>Administrator: 

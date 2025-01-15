@@ -1,0 +1,9 @@
+sequenceDiagram
+    %% Diagram: C1 - Generowanie raportów
+    actor Administrator as Administrator
+    participant SystemBiletowy as System Biletowy
+    participant SystemCentralny as System Centralny
+    Administrator->>SystemBiletowy: Wygeneruj raport sprzedaży
+    SystemBiletowy->>SystemCentralny: Pobierz raraport sprzedaży
+    SystemCentralny-->>SystemBiletowy: Raport
+    SystemBiletowy-->>Administrator: 

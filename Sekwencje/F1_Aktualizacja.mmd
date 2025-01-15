@@ -1,0 +1,9 @@
+sequenceDiagram
+    %% Diagram: F1 - Zdalna aktualizacja oprogramowania biletomatów
+    actor Administrator as Administrator
+    participant SystemBiletowy as System Biletowy
+    participant Biletomaty as Biletomaty
+    Administrator->>SystemBiletowy: Zlecenie aktualizacji oprogramowania
+    SystemBiletowy->>Biletomaty: Przesłanie nowego oprogramowania
+    Biletomaty-->>SystemBiletowy: Potwierdzenie wykonania aktualizacji
+    SystemBiletowy-->>Administrator: 

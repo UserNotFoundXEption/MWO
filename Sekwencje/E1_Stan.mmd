@@ -1,0 +1,9 @@
+sequenceDiagram
+    %% Diagram: E1 - Pobranie stanu biletomatów
+    actor SystemWsparciaTechnicznego as System Wsparcia Technicznego
+    participant SystemBiletowy as System Biletowy
+    participant Biletomat as Biletomat
+    SystemWsparciaTechnicznego->>SystemBiletowy: Pokaż stanu urządzeń
+    SystemBiletowy->>Biletomat: Pobierz stan urządzenia
+    Biletomat-->>SystemBiletowy: Zwrot stanu
+    SystemBiletowy-->>SystemWsparciaTechnicznego: 

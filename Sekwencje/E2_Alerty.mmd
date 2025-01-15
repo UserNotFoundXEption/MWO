@@ -1,0 +1,9 @@
+sequenceDiagram
+    %% Diagram: E2 - Wyłsanie alertów o błędach
+    actor SystemWsparciaTechnicznego as System Wsparcia Technicznego
+    participant SystemBiletowy as System Biletowy
+    participant Biletomat as Biletomat
+    SystemWsparciaTechnicznego->>SystemBiletowy: Wyślij alert
+    SystemBiletowy->>Biletomat: Przekaż alert
+    Biletomat-->>SystemBiletowy: Potwierdzenie
+    SystemBiletowy-->>SystemWsparciaTechnicznego: 

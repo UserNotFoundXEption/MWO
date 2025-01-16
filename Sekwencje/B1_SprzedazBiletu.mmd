@@ -1,0 +1,17 @@
+sequenceDiagram
+    actor Użytkownik as Użytkownik
+    Użytkownik->>Biletomat: Wyświetl instrukcję zakupu
+    Biletomat-->>Użytkownik: 
+    Użytkownik->>Biletomat: Wyświetl dostępne bilety
+    Biletomat-->>Użytkownik: 
+    Użytkownik->>Biletomat: Wybierz bilet
+    Biletomat-->>Użytkownik: Podsumowanie biletu i ceny
+    Użytkownik->>Biletomat: Wybierz sposób płatności
+    Biletomat-->>Użytkownik: 
+    Użytkownik->>Biletomat: Potwierdź zakup
+    Biletomat->>SystemTransakcyjny: Inicjuj płatność
+    SystemTransakcyjny->>SystemTransakcyjny: Weryfikuj płatność
+    SystemTransakcyjny->>SystemBiletowy: Zapisz raport z transakcji
+    SystemBiletowy-->>SystemTransakcyjny: 
+    SystemTransakcyjny-->>Biletomat: Status transakcji
+    Biletomat-->>Użytkownik: Potwierdzenie zakupu, wydruk biletu i wydanie reszty

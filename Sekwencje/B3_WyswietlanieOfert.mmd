@@ -1,0 +1,8 @@
+sequenceDiagram
+    actor Użytkownik as Użytkownik
+    Użytkownik->>Biletomat: Pokaż oferty
+    Biletomat->>SystemBiletowy: Pobierz dostępne oferty
+    SystemBiletowy-->>Biletomat: Lista ofert
+    Biletomat-->>Użytkownik: 
+    Użytkownik->>Biletomat: Pokaż szczegóły oferty
+    Biletomat-->>Użytkownik: 

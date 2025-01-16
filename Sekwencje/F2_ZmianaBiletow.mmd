@@ -1,0 +1,13 @@
+sequenceDiagram
+    %% Diagram: F2 - Konfiguruj bilety
+    actor Administrator as Administrator
+    participant SystemBiletowy as System Biletowy
+    participant Biletomat as Biletomat
+    Administrator->>SystemBiletowy: Wyślij obecne ofery
+    SystemBiletowy-->>Administrator: 
+    Administrator->>SystemBiletowy: Dodaj / Edytuj / Usuń bilet
+    SystemBiletowy-->>Administrator: Potwierdzenie aktualizacji
+    Administrator->>SystemBiletowy: Zaaktualizuj dane
+    SystemBiletowy->>Biletomat: Zaaktualizuj dane
+    Biletomat-->>SystemBiletowy: Potwierdzenie
+    SystemBiletowy-->>Administrator: 
